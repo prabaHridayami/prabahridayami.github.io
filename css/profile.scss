@@ -1,0 +1,77 @@
+@import "mixins";
+@import "variables";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.section-hero {
+    // background: url("/images/hero.jpg") 100% center / cover no-repeat;
+    background-attachment: fixed;
+    margin-top: -64px;
+    height: 100vh;
+
+
+    .row {
+        height: 100vh;
+        color: black;
+
+    }
+
+    .title {
+        height: 100%;
+    }
+
+
+}
+
+
+.section-about {
+    background: $white;
+
+    @include md {
+
+        .step {
+            opacity: 0;
+            transition: .3s opacity;
+
+            &.active {
+                opacity: 1;
+                transition: .3s opacity;
+            }
+        }
+
+        .step-content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .campus {
+            overflow-y: auto;
+        }
+    }
+
+    .caption {
+        color: #37c;
+    }
+
+}
+
+.arrow-up {
+    border-radius: 30px;
+    border: 2px solid $black;
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 30px;
+    padding: 5px;
+
+    img {
+        width: 24px;
+    }
+}
